@@ -1,0 +1,24 @@
+﻿@model IEnumerable<AmountExpenses.Models.Expense>
+@{ 
+
+}
+<table class="table" >
+    <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Month</th>
+        <th>Categories</th>
+    </tr>
+    @foreach(var el in Model)
+    {
+        <tr>
+            <a asp-controller="Home" asp-action="Post" asp-route-id="@el.Id"></a>
+            <th>@el.Title</th>
+            <th>@el.Amount</th>
+            <th>@el.Month</th>
+            <th>@el.Categories</th>
+        </tr>
+        
+    }
+
+</table>
